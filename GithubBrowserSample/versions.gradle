@@ -22,7 +22,7 @@
 **/
 ext.deps = [:]
 def versions = [:]
-versions.android_gradle_plugin = '3.3.1'
+versions.android_gradle_plugin = '3.3.2'
 versions.apache_commons = "2.5"
 versions.arch_core = "2.0.0"
 versions.atsl_rules = "1.1.0-alpha4"
@@ -167,8 +167,10 @@ deps.navigation = navigation
 ext.deps = deps
 
 def addRepos(RepositoryHandler handler) {
-    handler.google()
-    handler.jcenter()
-    handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    handler.maven { url "https://maven.aliyun.com/repository/jcenter" }
+    handler.maven { url "https://maven.aliyun.com/repository/google" }
+    handler.maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+    handler.maven { url 'https://maven.aliyun.com/repository/snapshots' }
+    handler.maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
 }
 ext.addRepos = this.&addRepos
