@@ -136,8 +136,10 @@ ext.build_versions = build_versions
 
 
 def addRepos(RepositoryHandler handler) {
-    handler.google()
-    handler.jcenter()
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
     handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 ext.addRepos = this.&addRepos

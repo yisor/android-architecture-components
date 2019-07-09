@@ -29,8 +29,8 @@ public class FragmentDataBindingComponent implements DataBindingComponent {
         this.adapter = new FragmentBindingAdapters(fragment);
     }
 
-    @Override
-    public FragmentBindingAdapters getFragmentBindingAdapters() {
-        return adapter;
-    }
+//    @Override
+//    public FragmentBindingAdapters getFragmentBindingAdapters() {
+//        return adapter;
+//    }
 }
